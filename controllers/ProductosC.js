@@ -1,26 +1,15 @@
 const { response } = require("express");
 const { mongo } = require("mongoose");
-const { Usuario } = require("../models");
+const { Producto } = require("../models");
 
-const crearUsuario = async (req, res) => {
+const crearProductos = async (req, res) => {
   try {
     const body = req.body;
-    body.fechaNacimiento = new Date(body.fechaNacimiento);
-    const existeUsuario = await Usuario.findOne({ username: body.username });
-    if (existeUsuario) {
-      return res
-        .status(400)
-        .json(`${existeUsuario.username} ya se encuentra registrado`);
-    }
-    const emailExist = await Usuario.findOne({ email: body.email });
-    if (emailExist) {
-      return res
-        .status(404)
-        .json(`El correo ${emailExist.email} ya está registrado`);
-    }
-    const usuario = new Usuario(body);
-    const usuarioNuevo = await usuario.save();
-    return res.status(201).json(usuarioNuevo);
+    body.fecha = new Date();
+    body.idCategoria= mongo.ObjectId(body.idCategoria)
+    const producto = new Producto(body);
+    const productoNuevo = await producto.save();
+    return res.status(201).json(productoNuevo);
   } catch (error) {
     return res.json(error);
   }
@@ -62,8 +51,5 @@ const borrarUsuario = async (req, res) => {
 };
 
 module.exports = {
-  crearUsuario,
-  mostarUsuarios,
-  actualizarUsuario,
-  borrarUsuario,
+  crearProductos
 };

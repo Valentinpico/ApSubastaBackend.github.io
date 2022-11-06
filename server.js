@@ -10,7 +10,8 @@ class Server {
         this.paths = {
             Usuarios: '/users',
             TipoNotificaciones:'/tiponotificaciones',
-            CategoriaProducto:'/categoriaproductos'
+            CategoriaProducto:'/categoriaproductos',
+            Productos:'/productos'
         }
         this.conectarDB();
         this.middlewares();
@@ -29,6 +30,7 @@ class Server {
         this.app.use(this.paths.Usuarios, require('./routes/usuariosR'));
         this.app.use(this.paths.TipoNotificaciones, require('./routes/tipoNotificacion'));
         this.app.use(this.paths.CategoriaProducto, require('./routes/categoriaProducto'));
+        this.app.use(this.paths.Productos, require('./routes/productosR'));
     }
     listen() {
         this._express.listen(this.port);
