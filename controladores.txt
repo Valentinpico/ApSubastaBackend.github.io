@@ -1,0 +1,40 @@
+USUARIO
+	Post, http://localhost:4000/7moB/AppSubasta/api/users
+ 	delete, http://localhost:4000/7moB/AppSubasta/api/users/"id del usuario a eliminar"
+	get, http://localhost:4000/7moB/AppSubasta/api/users/"username del usuario"
+	update, http://localhost:4000/7moB/AppSubasta/api/users/"id del usuario a actualizar" se manda el json nuevo
+
+
+
+----------------------------------------
+
+TIPO DE NOTIFICACIÓN
+	por id http://localhost:4000/7moB/AppSubasta/api/TipoNotificaciones/"id de tipo de notificacion"
+
+CATEGORIA PRODUCTO
+	por id, http://localhost:4000/7moB/AppSubasta/api/categoriaproductos/"id de la categoria"
+	general, http://localhost:4000/7moB/AppSubasta/api/categoriaproductos/
+
+NOTIFICACION
+	post, get
+
+PEDIDO
+	Post, update, delete, get
+
+FAVORITO
+	Get por usuario, delete, post
+
+IMAGE
+	Post, update, get, delete
+
+RECIBO
+	Post, get por usuario
+
+PRODUCTO
+	Post, http://localhost:4000/7moB/AppSubasta/api/productos/
+	get general menos los del usuario propietario, http://localhost:4000/7moB/AppSubasta/api/productos/general/"id del usuario"
+	get de los productos del usuario, http://localhost:4000/7moB/AppSubasta/api/productos/propio/"id del usuario "
+	get por categoria, http://localhost:4000/7moB/AppSubasta/api/productos/"id de categoria"
+	update, http://localhost:4000/7moB/AppSubasta/api/productos/"id del producto a actualizar" y se manda el json nuevo
+	delete, http://localhost:4000/7moB/AppSubasta/api/productos/"id del producto a eliminar"
+

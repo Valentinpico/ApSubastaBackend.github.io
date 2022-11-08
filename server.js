@@ -11,7 +11,13 @@ class Server {
             Usuarios: '/users',
             TipoNotificaciones:'/tiponotificaciones',
             CategoriaProducto:'/categoriaproductos',
-            Productos:'/productos'
+            Productos:'/productos',
+            //
+            Notificacion:'/notificacion',
+            Pedido:'/pedido',
+            Favorito:'/favorito',
+            Imagen:'/imagen',
+            Recibo:'/recibo'
         }
         this.conectarDB();
         this.middlewares();
