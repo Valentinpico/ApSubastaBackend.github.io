@@ -12,8 +12,8 @@ class Server {
             TipoNotificaciones:'/tiponotificaciones',
             CategoriaProducto:'/categoriaproductos',
             Productos:'/productos',
-            //
             Notificacion:'/notificacion',
+            //
             Pedido:'/pedido',
             Favorito:'/favorito',
             Imagen:'/imagen',
@@ -37,6 +37,7 @@ class Server {
         this.app.use(this.paths.TipoNotificaciones, require('./routes/tipoNotificacion'));
         this.app.use(this.paths.CategoriaProducto, require('./routes/categoriaProducto'));
         this.app.use(this.paths.Productos, require('./routes/productosR'));
+        this.app.use(this.paths.Productos, require('./routes/notificacionesR'));
     }
     listen() {
         this._express.listen(this.port);
