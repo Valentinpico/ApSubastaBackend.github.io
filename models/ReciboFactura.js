@@ -6,8 +6,8 @@ const reciboFacturaSchema = Schema({
     required: [true, "Por favor, ingrese el ID del pedido"],
   },
   fecha: {
-    type:Date,
-    required: [true, "Por favor, ingrese el id del producto"],
+    type: Date,
+    default: new Date()
   },
   totalPagar: {
     type: Number,

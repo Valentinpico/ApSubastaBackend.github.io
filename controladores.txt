@@ -16,16 +16,25 @@ CATEGORIA PRODUCTO
 	general, http://localhost:4000/7moB/AppSubasta/api/categoriaproductos/
 
 NOTIFICACION
-	post, get
+	post, http://localhost:4000/7moB/AppSubasta/api/notificacion/
+	get por usuario, http://localhost:4000/7moB/AppSubasta/api/notificacion/"id del usuario a consultar sus notificaciones"
 
 PEDIDO
-	Post, update, delete, get
+	Post, http://localhost:4000/7moB/AppSubasta/api/pedido/
+	update, http://localhost:4000/7moB/AppSubasta/api/pedido/'id del pedido a actualizar'
+ 	delete, http://localhost:4000/7moB/AppSubasta/api/pedido/'id del pedido a eliminar'
+	get del pedido con el mayor monto, http://localhost:4000/7moB/AppSubasta/api/pedido/mayor/'id del producto'
+	get general de pedidos por id de producto, http://localhost:4000/7moB/AppSubasta/api/pedido/'id del producto'
 
 FAVORITO
-	Get por usuario, delete, post
+	Get por usuario, http://localhost:4000/7moB/AppSubasta/api/favorito/"ID DEL USUARIO PARA OBTENER SUS FAVORITOS"
+	delete, http://localhost:4000/7moB/AppSubasta/api/favorito/"ID DEL PRODUCTO QUE SE QUIERE QUITAR DE FAVORITOS"
+	post http://localhost:4000/7moB/AppSubasta/api/favorito/
 
 IMAGE
-	Post, update, get, delete
+	Post, http://localhost:4000/7moB/AppSubasta/api/imagen/
+ 	get, http://localhost:4000/7moB/AppSubasta/api/imagen/"id del producto a consultar las imagens"
+ 	delete, http://localhost:4000/7moB/AppSubasta/api/imagen/"id de la imagen a eliminar"
 
 RECIBO
 	Post, get por usuario
