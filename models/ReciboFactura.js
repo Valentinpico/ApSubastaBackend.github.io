@@ -3,7 +3,6 @@ const reciboFacturaSchema = Schema({
   idPedido: {
     type: Schema.Types.ObjectId,
     ref: "Pedido",
-    required: [true, "Por favor, ingrese el ID del pedido"],
   },
   fecha: {
     type: Date,
@@ -12,5 +11,10 @@ const reciboFacturaSchema = Schema({
   totalPagar: {
     type: Number,
   },
+  idUsuario: {
+    type: Schema.Types.ObjectId,
+    ref: "Usuario",
+  },
+
 });
 module.exports = model("ReciboFactura", reciboFacturaSchema);

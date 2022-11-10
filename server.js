@@ -16,7 +16,6 @@ class Server {
             Favorito:'/favorito',
             Imagen:'/imagen',
             Pedido:'/pedido',
-            //
             Recibo:'/recibo'
         }
         this.conectarDB();
@@ -41,6 +40,7 @@ class Server {
         this.app.use(this.paths.Favorito, require('./routes/favoritoR'));
         this.app.use(this.paths.Imagen, require('./routes/imagenR'));
         this.app.use(this.paths.Pedido, require('./routes/pedidosR'));
+        this.app.use(this.paths.Recibo, require('./routes/reciboR'));
 
     }
     listen() {
