@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'SubastAp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_13648C6564F5474FAD5E31FD83B3F863 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_ABA0DBD521784B51A8D162630AD9B6F6 }}
           package: .
