@@ -6,7 +6,7 @@ class Server {
     constructor() {
         this.app = express.Router();
         this.router = express.Router();
-        this.port = process.env.PORT;
+        this.port = process.env.PORT || "";
         this.paths = {
             Usuarios: '/users',
             TipoNotificaciones:'/tiponotificaciones',
